@@ -1,23 +1,3 @@
-# Just another market stock value scoring algorithm
-
-There are as many strategies for selecting stocks for an investment portfolio as there are personalities in the world. The present algorithm based on **yfinance `0.1.62`** and **pytickersymbols `1.4.3`** is only intended to share a basic example using publicly available business information.
-
-## Investment disclaimer
-
-This project is distributed for general informational and educational purposes only and is not intended to constitute investment advice.
-
-## Glosary
-
-**PriceToEarningsRatio:** The price-to-earnings ratio (P/E ratio) is the ratio for valuing a company that measures its current share price relative to its per-share earnings (EPS). The price-to-earnings ratio is also sometimes known as the price multiple or the earnings multiple. [Learn more][1]
-
-**PriceToSalesRatio:** The price-to-sales ratio (Price/Sales or P/S) is calculated by taking a company's market capitalization (the number of outstanding shares multiplied by the share price) and divide it by the company's total sales or revenue over the past 12 months. The lower the P/S ratio, the more attractive the investment. [Learn more][2]
-
-**EV_EBITDA:** The enterprise value (EV) to the earnings before interest, taxes, depreciation, and amortization (EBITDA) ratio varies by industry. EBITDA measures a firm's overall financial performance, while EV determines the firm's total value. [Learn more][3]
-
-**EV_R:** The enterprise value-to-revenue (EV/R) multiple helps compare a company’s revenues to its enterprise value. The lower the better, in that, a lower EV/R multiple signals a company is undervalued. The EV/R multiple is also often used to determine a company's valuation in the case of a potential acquisition. It's also called the enterprise value-to-sales multiple. [Learn more][4]
-
-## Results
-
 | Stock                           | Ticker   |       P/E |    P/E PC |       P/S |   P/S PC |   EV/EBITDA |   EV/EBITDA PC |   EV/R |   EV/R PC |   Score |
 |:--------------------------------|:---------|----------:|----------:|----------:|---------:|------------:|---------------:|-------:|----------:|--------:|
 | Costco Wholesale Corporation    | COST     |  42.1689  |  73.4043  |  0.977768 | 84.0426  |      20.052 |       63.8298  |  0.932 |  93.617   | 78.7234 |
@@ -72,21 +52,3 @@ This project is distributed for general informational and educational purposes o
 | Charter Communications Inc.     | CHTR     |  41.6249  |  72.3404  |  2.84255  | 55.3191  |      12.094 |       34.0426  |  4.605 |  40.4255  | 50.5319 |
 | Croda International PLC         | CRDA.L   |  49.3411  |  75.5319  |  7.66486  | 23.4043  |      29.214 |       80.8511  |  7.768 |  22.3404  | 50.5319 |
 | E.ON SE                         | EOAN.F   |  11.6624  |   6.38298 |  0.421809 | 94.6809  |       8.718 |        8.51064 |  0.992 |  91.4894  | 50.266  |
-
-## References
-
-1. Jason Fernando. (june 29, 2021). _Price-to-Earnings (P/E) Ratio Definition and Examples_. Investopedia. Retrieved on july 10, 2021 from https://www.investopedia.com/terms/p/price-earningsratio.asp
-
-[1]: https://www.investopedia.com/terms/p/price-earningsratio.asp
-
-2. Marshall Hargrave. (may 6, 2021). _Price-to-Sales Ratio (P/S Ratio) Definition_. Investopedia. Retrieved on july 10, 2021 from https://www.investopedia.com/terms/p/price-to-salesratio.asp
-
-[2]: https://www.investopedia.com/terms/p/price-to-salesratio.asp
-
-3. Adam Hayes. (march 25, 2021). _Enterprise Multiple Definition_. Investopedia. Retrieved on july 10, 2021 from https://www.investopedia.com/terms/e/ev-ebitda.asp
-
-[3]: https://www.investopedia.com/terms/e/ev-ebitda.asp
-
-4. Marshall Hargrave. (february 27, 2021). _Enterprise-Value-to-Revenue Multiple – EV/R Definition_. Investopedia. Retrieved on july 10, 2021 https://www.investopedia.com/terms/e/ev-revenue-multiple.asp
-
-[4]: https://www.investopedia.com/terms/e/ev-revenue-multiple.asp
