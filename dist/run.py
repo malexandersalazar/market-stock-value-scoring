@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
+# In[1]:
 
 
 import pandas as pd
@@ -11,8 +11,9 @@ from datetime import datetime as DateTime
 import yfinance as yf
 import pytickersymbols as pts
 
+# ## Acquiring information about stocks 
 
-# In[10]:
+# In[4]:
 
 
 stock_data = pts.PyTickerSymbols()
@@ -68,7 +69,7 @@ for market_stock in market_stocks:
 
 stocks = pd.DataFrame(stocks_list, columns=['Company','Symbol','Symbol_Google','Symbol_Yahoo','Country','Indices','Sectors'])
 
-# In[11]:
+# In[5]:
 
 
 # Some stocks are listed on more than the stock index.
@@ -77,7 +78,7 @@ stocks = stocks[~stocks.index.duplicated(keep='first')]
 
 # ## Transforming data for value calculation 
 
-# In[13]:
+# In[6]:
 
 
 # Defining stocks value scoring dataframe
@@ -136,7 +137,7 @@ for index, stock in stocks.iterrows():
                 stock['Sectors'],
                 yf_ticker.info['marketCap'],
                 yf_ticker.info['regularMarketPrice'],
-                yf_ticker.info['financialCurrency'],
+                yf_ticker.info['currency'],
                 yf_ticker.info['trailingPE'],
                 'N/A',
                 yf_ticker.info['priceToSalesTrailing12Months'],
@@ -162,7 +163,7 @@ initial_count = len(so_dataframe)
 so_dataframe = so_dataframe.dropna()
 
 
-# In[14]:
+# In[7]:
 
 
 # Calculating percentiles
@@ -191,7 +192,7 @@ for row in so_dataframe.index:
     so_dataframe.loc[row, 'Score'] = mean(value_percentiles)
 
 # Sorting and selecting
-result_df = so_dataframe[so_dataframe['Score'] >= 50].copy()
+result_df = so_dataframe[so_dataframe['Score'] > 50].copy()
 result_df.sort_values(by = 'Score', inplace = True, ascending=False)
 
 skipped_count = initial_count - len(result_df)
@@ -200,7 +201,7 @@ now = DateTime.now()
 print()
 print(f'Scoring executed successfully at {now.hour}:{now.minute} | {total_stocks} listed | {errors} not found | {skipped_count} incomplete | {len(result_df)} selected')
 
-# In[17]:
+# In[10]:
 
 
 writer = pd.ExcelWriter('market_stock_value_scoring.xlsx', engine='xlsxwriter')
