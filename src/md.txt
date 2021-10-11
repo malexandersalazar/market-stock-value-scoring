@@ -1,37 +1,3 @@
-# Just another market stock value scoring algorithm
-
-There are as many strategies for selecting stocks for an investment portfolio as there are personalities in the world. The present algorithm is only intended to share a basic example using publicly available business information.
-
-## Investment disclaimer
-
-This project is distributed for general informational and educational purposes only and is not intended to constitute investment advice.
-
-## Glosary
-
-**Symbol:** A stock symbol is a unique series of letters assigned to a security for trading purposes. Stocks listed on the New York Stock Exchange (NYSE) can have four or fewer letters. Nasdaq-listed securities can have up to five characters. Symbols are just a shorthand way of describing a company's stock, so there is no significant difference between those that have three letters and those that have four or five. Stock symbols are also known as ticker symbols. [Learn more][1]
-
-**PriceToEarningsRatio:** The price-to-earnings ratio (P/E ratio) is the ratio for valuing a company that measures its current share price relative to its per-share earnings (EPS). The price-to-earnings ratio is also sometimes known as the price multiple or the earnings multiple. [Learn more][2]
-
-**PriceToSalesRatio:** The price-to-sales ratio (Price/Sales or P/S) is calculated by taking a company's market capitalization (the number of outstanding shares multiplied by the share price) and divide it by the company's total sales or revenue over the past 12 months. The lower the P/S ratio, the more attractive the investment. [Learn more][3]
-
-**EV_EBITDA:** The enterprise value (EV) to the earnings before interest, taxes, depreciation, and amortization (EBITDA) ratio varies by industry. EBITDA measures a firm's overall financial performance, while EV determines the firm's total value. [Learn more][4]
-
-**EV_R:** The enterprise value-to-revenue (EV/R) multiple helps compare a company’s revenues to its enterprise value. The lower the better, in that, a lower EV/R multiple signals a company is undervalued. The EV/R multiple is also often used to determine a company's valuation in the case of a potential acquisition. It's also called the enterprise value-to-sales multiple. [Learn more][5]
-
-## Usage
-
-Just copy the PY file and off you go.
-
-> python run.py
-
-## Prerequisites
-
-* Python (>= 3.8.5)
-* yfinance (>= 0.1.62)
-* pytickersymbols (>= 1.4.3)
-
-## Results
-
 | Company                                     | Symbol   | Google Symbol   | Yahoo Symbol   | Currency   |    Market Cap |   Market Cap (USD) |       P/E |     P/E PC |   P/E INV-PC |         P/S |     P/S PC |   P/S INV-PC |   EV/EBITDA |   EV/EBITDA PC |   EV/R |    EV/R PC |   EV/R INV-PC |   Score for Long |   Score for Short |
 |:--------------------------------------------|:---------|:----------------|:---------------|:-----------|--------------:|-------------------:|----------:|-----------:|-------------:|------------:|-----------:|-------------:|------------:|---------------:|-------:|-----------:|--------------:|-----------------:|------------------:|
 | 3M Company                                  | MMM      | FRA:MMM         | MMM.F          | EUR        |   88588066816 |        1.02521e+11 |  17.5077  |  18.0328   |    82.2951   |  2.55047    |  44.918    |    55.4098   |      10.146 |      17.0492   |  2.943 |  40.6557   |     60.3279   |          37.7049 |          55.9563  |
@@ -339,25 +305,3 @@ Just copy the PY file and off you go.
 | eBay Inc.                                   | EBAY     | NASDAQ:EBAY     | EBAY           | USD        |   48786706432 |        4.87867e+10 |   4.05106 |   1.31148  |    99.0164   |  4.27241    |  62.2951   |    38.0328   |      11.535 |      25.5738   |  3.583 |  47.8689   |     53.1148   |          29.5082 |          69.7268  |
 | lululemon athletica inc.                    | LULU     | NASDAQ:LULU     | LULU           | USD        |   53766905856 |        5.37669e+10 |  73.7094  |  90.4918   |     9.83607  | 10.8044     |  88.8525   |    11.4754   |      40.2   |      91.4754   |  9.466 |  85.5738   |     15.4098   |          52.2131 |          61.4208  |
 | salesforce.com Inc.                         | CRM      | NYSE:CRM        | CRM            | USD        |  266757931008 |        2.66758e+11 | 109.123   |  94.7541   |     5.57377  | 11.3326     |  89.8361   |    10.4918   |      76.438 |      97.7049   | 11.593 |  90.1639   |     10.8197   |          53.4426 |          61.8579  |
-
-## References
-
-1. Adam Hayes. (december 28, 2020). _Stock Symbol (Ticker) Definition_. Investopedia. Retrieved on july 11, 2021 from https://www.investopedia.com/terms/s/stocksymbol.asp
-
-[1]: https://www.investopedia.com/terms/s/stocksymbol.asp
-
-2. Jason Fernando. (june 29, 2021). _Price-to-Earnings (P/E) Ratio Definition and Examples_. Investopedia. Retrieved on july 10, 2021 from https://www.investopedia.com/terms/p/price-earningsratio.asp
-
-[2]: https://www.investopedia.com/terms/p/price-earningsratio.asp
-
-3. Marshall Hargrave. (may 6, 2021). _Price-to-Sales Ratio (P/S Ratio) Definition_. Investopedia. Retrieved on july 10, 2021 from https://www.investopedia.com/terms/p/price-to-salesratio.asp
-
-[3]: https://www.investopedia.com/terms/p/price-to-salesratio.asp
-
-4. Adam Hayes. (march 25, 2021). _Enterprise Multiple Definition_. Investopedia. Retrieved on july 10, 2021 from https://www.investopedia.com/terms/e/ev-ebitda.asp
-
-[4]: https://www.investopedia.com/terms/e/ev-ebitda.asp
-
-5. Marshall Hargrave. (february 27, 2021). _Enterprise-Value-to-Revenue Multiple – EV/R Definition_. Investopedia. Retrieved on july 10, 2021 https://www.investopedia.com/terms/e/ev-revenue-multiple.asp
-
-[5]: https://www.investopedia.com/terms/e/ev-revenue-multiple.asp
